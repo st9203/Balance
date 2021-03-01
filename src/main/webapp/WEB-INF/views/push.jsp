@@ -2,8 +2,15 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="d-flex justify-content-center">
 	<main class="px-3">
-		<div class="input-group mb-3">
+		<div class="input-group mb-5" style="height:200px;">
 			<form action="/data/insert" method="POST" class="form-controller">
+				<div class="input-group flex-nowrap">
+					<span class="input-group-text" id="addon-wrapping">조건</span> 
+					<input	type="text" class="form-control" placeholder="ex) 무조건 먹어야한다면"	name="ifMoon" aria-describedby="addon-wrapping">
+				</div>
+					<br>
+
+
 		<div class="d-flex justify-content-between">
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping">A</span> 

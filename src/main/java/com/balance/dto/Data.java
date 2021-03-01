@@ -11,13 +11,16 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@lombok.Data
 public class Data {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idx;
 	private String theme;
+	private String ifMoon;
 	private String A;
 	private String B;
+	
 	
 }

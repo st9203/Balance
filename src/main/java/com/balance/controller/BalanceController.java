@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.balance.dto.Data;
 import com.balance.repository.DataRepository;
@@ -16,21 +17,39 @@ public class BalanceController {
 	DataRepository dataRepository;
 	
 	@GetMapping({"/","/index"})
-	public String main() {
+	public ModelAndView main() {
 		System.out.println("Main페이지");
-		return "index";
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index");
+		
+		return mav;
 	}
 	
 	@GetMapping("/data")
-	public String data() {
-		return "push";
+	public ModelAndView push() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("push");
+		return mav;
 	}
 
-	@PostMapping("/data/insert")
-	public String push(Data data) {
+	@GetMapping("/game")
+	public ModelAndView game() {
 		
-		System.out.println("입력받은 DATA : "+data );
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("game");
 		
-		return "redirect:/index";
+		return mav;
 	}
+	
+	
+	@PostMapping("/data/insert")
+	public ModelAndView push(Data data) {
+		
+		System.out.println("입력받은 DATA : "+data.toString() );
+		dataRepository.save(data);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("redirect:/index");
+		return mav;
+	}
+	
 }
