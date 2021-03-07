@@ -2,6 +2,9 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="d-flex justify-content-center">
 	<main class="px-3">
+	
+		<h1>데이터 추가좀</h1>
+	<br>
 		<div class="input-group mb-5" style="height:200px;">
 			<form action="/data/insert" method="POST" class="form-controller">
 				<div class="input-group flex-nowrap">

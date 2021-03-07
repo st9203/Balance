@@ -2,7 +2,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="d-flex justify-content-center">
 	<main class="px-3">
-		<h1>ING</h1>		
+		<h1>아쥑</h1>		
 	</main>
 </div>
 
