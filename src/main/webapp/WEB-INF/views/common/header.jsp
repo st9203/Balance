@@ -59,11 +59,16 @@
 
 		$('nav a:eq(1)').addClass('active');
 	
-	}else{
+	}else if(url == '/game'){
 
 		$('nav a:eq(2)').addClass('active');
 
+	}else{
+	
+		$('nav a:eq(3)').addClass('active');
+	
 	}
+	
  });
 	
 
@@ -77,11 +82,12 @@
 
 		<header class="mb-auto">
 			<div>
-				<h3 class="float-md-start mb-0">밸런스 게임</h3>
+				<h3 class="float-md-start mb-0">Web</h3>
 				<nav class="nav nav-masthead justify-content-center float-md-end">
-					<a class="nav-link" id="index" aria-current="page" href="/index">Home</a>
+					<a class="nav-link" id="index" href="/index">Home</a>
 					<a class="nav-link" id="index" href="/data">Data</a>
 					<a class="nav-link" id="index" href="/game">Game</a>
+					<a class="nav-link" id="index" href="/chat">Chat</a>
 				</nav>
 			</div>
 		</header>

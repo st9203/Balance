@@ -52,6 +52,16 @@ public class BalanceController {
 		return mav;
 	}
 
+	@GetMapping("/chat")
+	public ModelAndView chat() {
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("chat");
+		
+		return mav;
+	}
+	
+	
 	@PostMapping("/data/insert")
 	public ModelAndView push( Data data) {
 
