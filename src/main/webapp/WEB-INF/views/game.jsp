@@ -2,6 +2,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="d-flex justify-content-center">
 	<main class="px-3">
+<<<<<<< HEAD
 		<h1>테마를 골라주세요</h1>
 		<form action="/game/start" method="get">
 		<div class="input-group mb-3">
@@ -16,6 +17,9 @@
 
 		<button type="submit">게임 시작</button>
 		</form>
+=======
+		<h1>아쥑</h1>		
+>>>>>>> branch 'master' of https://github.com/st9203/balance
 	</main>
 </div>
 

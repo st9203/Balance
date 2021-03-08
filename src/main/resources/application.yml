@@ -6,7 +6,7 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-  datasource:    url: jdbc:mariadb://localhost:3308/balance
+  datasource:    url: jdbc:mariadb://localhost:3306/balance
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: als123  jpa:
