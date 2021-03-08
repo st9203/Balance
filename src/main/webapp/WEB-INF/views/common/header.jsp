@@ -59,14 +59,14 @@
 
 		$('nav a:eq(1)').addClass('active');
 	
-	}else if(url == '/game'){
-
-		$('nav a:eq(2)').addClass('active');
-
-	}else{
+	}else if(url == '/chat'){
 	
 		$('nav a:eq(3)').addClass('active');
 	
+	}else {
+
+		$('nav a:eq(2)').addClass('active');
+
 	}
 	
  });

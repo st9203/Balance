@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @lombok.Data
+@NamedQuery(name= "Data.findByTheme", query = "SELECT d FROM Data d WHERE d.theme = ?1")
 public class Data {
 
 	@Id
@@ -19,6 +21,7 @@ public class Data {
 	private int idx;
 	private String theme;
 	private String ifMoon;
+	private int choice;
 	private String A;
 	private String B;
 	

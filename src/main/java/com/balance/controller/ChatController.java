@@ -1,5 +1,8 @@
 package com.balance.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -14,23 +17,16 @@ public class ChatController {
 	
 	@MessageMapping("/chat.sendMessage")
 	@SendTo("/topic/public")
-	public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
-		System.out.println("SendMessage : "+chatMessage.toString() );
+	public ChatMessage sendmessage(@Payload ChatMessage chatMessage) {
+		System.out.println("sendmessage :"+chatMessage);
 		return chatMessage;
 	}
 	
-	@MessageMapping("chat.addUser")
-	@SendTo("topic/public")
-	public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor header) {
+	@MessageMapping("/chat.addUser")
+	@SendTo("/topic/public")
+	public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor )	{
 		
-		System.out.println("addUser\n"+ chatMessage+","+header);
-		System.out.println("-------------------");
-		System.out.println("Null찾기 "+chatMessage.getSender());
-		System.out.println("ChatController - "+chatMessage.getTime());
-		header.getSessionAttributes().put("username", chatMessage.getSender());
+		headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
 		return chatMessage;
 	}
-	
-	
-	
 }

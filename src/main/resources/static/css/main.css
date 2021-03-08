@@ -296,4 +296,9 @@ button.accent {
     .chat-header h2 {
         font-size: 1.1em;
     }
+    
 }
+	.time-message{
+    	float:right;
+    }
+    

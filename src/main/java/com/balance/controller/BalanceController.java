@@ -1,9 +1,13 @@
 package com.balance.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.balance.dto.Data;
@@ -37,6 +41,17 @@ public class BalanceController {
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("game");
+		
+		return mav;
+	}
+	@GetMapping("/game/start")
+	public ModelAndView startGame(@RequestParam String theme) {
+		
+		ModelAndView mav = new ModelAndView();
+		List<Data> list = dataRepository.findByTheme(theme);
+		System.out.println("List : "+list);
+		mav.addObject("list", list);
+		mav.setViewName("startGame");
 		
 		return mav;
 	}
