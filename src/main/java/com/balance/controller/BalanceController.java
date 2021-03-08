@@ -74,6 +74,13 @@ public class BalanceController {
 		return mav;
 	}
 	
+	@GetMapping("/maps")
+	public String maps() {
+		
+		return "/maps";
+		
+	}
+	
 	
 	@PostMapping("/data/insert")
 	public ModelAndView push( Data data) {
@@ -84,5 +91,6 @@ public class BalanceController {
 		mav.setViewName("redirect:/index");
 		return mav;
 	}
+	
 
 }
