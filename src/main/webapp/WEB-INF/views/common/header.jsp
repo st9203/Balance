@@ -102,7 +102,7 @@
 <link href="https://getbootstrap.com/docs/5.0/examples/cover/cover.css"
 	rel="stylesheet">
 </head>
-<body class="d-flex h-100 text-center text-white bg-striped">
+<body class="d-flex h-100 text-center text-black bg-white">
 
 
 	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
