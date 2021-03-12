@@ -79,15 +79,11 @@
 	
 	}else if(url == '/chat'){
 	
-		$('nav a:eq(3)').addClass('active');
-	
-	}else if(url == '/game'){
-
 		$('nav a:eq(2)').addClass('active');
-		
-	}else if(url == '/board'){
+	
+	}else if(url == '/maps'){
 
-		$('nav a:eq(5)').addClass('active');
+		$('nav a:eq(3)').addClass('active');
 
 	}else {
 
@@ -113,7 +109,6 @@
 				<nav class="nav nav-masthead justify-content-center float-md-end">
 					<a class="nav-link" id="index" href="/index">Home</a> <a
 						class="nav-link" id="index" href="/data">Data</a> <a
-						class="nav-link" id="index" href="/game">Game</a> <a
 						class="nav-link" id="index" href="/chat">Chat</a> <a
 						class="nav-link" id="index" href="/maps">Maps</a> <a
 						class="nav-link" id="index" href="/board">Board</a>
