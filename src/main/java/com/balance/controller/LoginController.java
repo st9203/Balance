@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.balance.dto.User;
 import com.balance.repository.UserRepository;
@@ -30,24 +31,33 @@ public class LoginController {
 	}
 
 	@PostMapping("/join")
+	@ResponseBody
 	public String join(User user) {
+		User newUser = null; 
+		newUser = userRepository.findByUsername(user.getUsername());
 		System.out.println(user);
-		user.setRole("ROLE_USER");
-		String rawPassword = user.getPassword();
-		String encPassword = bCryptPasswordEncoder.encode(rawPassword); 
-		user.setPassword(encPassword);
-		userRepository.save(user);
-		return "redirect:/login";
+		System.out.println(newUser);
+		if(newUser == null) {
+			user.setRole("ROLE_USER");
+			String rawPassword = user.getPassword();
+			String encPassword = bCryptPasswordEncoder.encode(rawPassword); 
+			user.setPassword(encPassword);
+			userRepository.save(user);
+			return "success";
+		}else {
+			return "fail";
+			
+		}
 	}
 	
-	@GetMapping("/login")
-	public String login() {
-		return "login";
+	
+	@PostMapping("/checkId")
+	@ResponseBody
+	public String checkUserName(String username) {
+		return userRepository.checkUsername(username);
 	}
-
-	@GetMapping("/join")
-	public String join() {
-		return "join";
-	}
-
+	
+	
+	
+	
 }

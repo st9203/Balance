@@ -62,10 +62,10 @@
 
 
 		<!-- DB -->
-		<!-- Maria DB -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
 		<!-- Spring JDBC -->
