@@ -42,23 +42,23 @@
  // 하이라이트 처리
  $(document).ready(function(){
  
- 	var url = $(location).attr('pathname');
+ 	var pathName = $(location).attr('pathname').split('/');
  	
-		
+ 	var url = pathName[2];
 
-	if(url == '/data'){
+ 	if(url == 'data'){
 
 		$('nav a:eq(1)').addClass('active');
 	
-	}else if(url == '/chat'){
+	}else if(url == 'chat'){
 	
 		$('nav a:eq(2)').addClass('active');
 	
-	}else if(url == '/maps'){
+	}else if(url == 'maps'){
 
 		$('nav a:eq(3)').addClass('active');
 
-	}else if(url == '/board'){
+	}else if(url == 'board'){
 
 		$('nav a:eq(4)').addClass('active');
 
@@ -81,11 +81,13 @@
 			<div>
 				<h3 class="float-md-start mb-0">Balance</h3>
 				<nav class="nav nav-masthead justify-content-center float-md-end">
-					<a class="nav-link" id="index" href="/index">Home</a> <a
-						class="nav-link" id="index" href="/data">Data</a> <a
-						class="nav-link" id="index" href="/chat">Chat</a> <a
-						class="nav-link" id="index" href="/maps">Maps</a> <a
-						class="nav-link" id="index" href="/board">Board</a>
+					<a class="nav-link" id="index" href="/balance/index">Home</a> <a
+						class="nav-link" id="index" href="/balance/data">Data</a> <a
+						class="nav-link" id="index" href="/balance/chat">Chat</a> <a
+						class="nav-link" id="index" href="/balance/maps">Maps</a> <a
+						class="nav-link" id="index" href="/balance/board">Board</a>
 				</nav>
 			</div>
 		</header>
+		
+	<!-- 	<div class="container m-5"> -->

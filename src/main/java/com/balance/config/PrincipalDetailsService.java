@@ -21,7 +21,7 @@ public class PrincipalDetailsService implements UserDetailsService{
 	//시큐리티 session(Authentication(내부 UserDetails)) 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		System.out.println("Username : "+username);
+		System.out.println("##PrincipalDetailsService## Username : "+username);
 		User userEntity = userRepository.findByUsername(username);
 		if(userEntity != null) {
 			return new PrincipalDetails(userEntity);

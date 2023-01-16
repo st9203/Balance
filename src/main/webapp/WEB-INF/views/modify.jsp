@@ -16,22 +16,23 @@
 			document.form.content.focus();
 			return false;
 		}else{
-		alert('작성 완료!');
+		alert('수정 완료!');
 		return form.submit();
 		}
 	}
 </script>
 
-	<form action="/balance/board/insert" name="form" method="post">
+	<form action="/balance/board/modify" name="form" method="post">
+	<input type="hidden" value="${board.no }" name="no" />
 		<div class="mb-3">
 			<label for="title" class="form-label">제목</label> 
-			<input type="text" class="form-control" id="title" name="title" placeholder="제목을 작성해주세요.">
+			<input type="text" class="form-control" id="title" name="title" value="${board.title }" placeholder="제목을 작성해주세요.">
 		</div>
 		<div class="mb-3">
 			<label for="content" class="form-label">내용</label>
-			<textarea class="form-control" id="content" name=content rows="3"></textarea>
+			<textarea class="form-control" id="content" name=content rows="3">${board.content}</textarea>
 		</div>
-		<button type="button" onclick="chk();" class="btn btn-primary">작성완료</button>
+		<button type="button" onclick="chk();" class="btn btn-primary">수정완료</button>
 	</form>
 
 <%@include file="common/footer.jsp"%>

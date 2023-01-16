@@ -3,10 +3,10 @@
 <div class="d-flex justify-content-center">
 	<main class="px-3">
 	
-		<h1>데이터 추가좀</h1>
+		<h1>데이터</h1>
 	<br>
 		<div class="input-group mb-5" style="height:200px;">
-			<form action="/data/insert" method="POST" class="form-controller">
+			<form action="/balance/data/insert" method="POST" class="form-controller">
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping">조건</span> 
 					<input	type="text" class="form-control" placeholder="ex) 무조건 먹어야한다면"	name="ifMoon" aria-describedby="addon-wrapping">
@@ -26,7 +26,7 @@
 					<span class="input-group-text" id="addon-wrapping">B</span> 
 					<input	type="text" class="form-control" placeholder="ex) 토마토맛 토"	name="B" aria-describedby="addon-wrapping">
 				</div>
-</div>
+		</div>
 
 
 				<br>
@@ -39,8 +39,10 @@
 						<option value="ability">능력</option>
 					</select> <label class="input-group-text" for="theme">테마</label>
 				</div>
-
 				<br>
+				<c:if test="${role eq 'ROLE_ADMIN'}">
+				<button type="submit" class="btn btn-light mr-1">Admin</button>
+				</c:if>
 				<button type="submit" class="btn btn-light center">저장</button>
 			</form>
 		</div>

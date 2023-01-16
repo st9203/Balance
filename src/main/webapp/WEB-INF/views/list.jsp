@@ -2,7 +2,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 
-<form action="/board" method="get">
+<form action="/balance/board" method="get">
 
 	<div class="d-flex flex-row-reverse bd-highlight">
 		<div class="p-2 bd-highlight">
@@ -15,7 +15,7 @@
 
 </form>
 
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover" style='color:white;'>
 
 	<tr>
 		<th>No</th>
@@ -29,7 +29,7 @@
 		<tr>
 
 			<td>${list.no }</td>
-			<td><a href="/board/detail?no=${list.no}">${list.title }</td>
+			<td><a href="/balance/board/detail?no=${list.no}">${list.title }</td>
 			<td>${list.content }</td>
 			<td>${list.auth }</td>
 			<td><fmt:formatDate value="${list.day }" pattern="yyyy.MM.dd" /></td>
@@ -39,7 +39,7 @@
 </table>
 <div class="d-flex flex-row-reverse bd-highlight">
 	<div class="p-2 bd-highlight">
-		<a href="/board/write" class="btn btn-primary">작성</a>
+		<a href="/balance/board/write" class="btn btn-primary">작성</a>
 	</div>
 </div>
 

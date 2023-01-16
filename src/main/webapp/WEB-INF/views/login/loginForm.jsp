@@ -8,14 +8,14 @@
 	
 	<!-- Email input -->
 	  <div class="mb-4">
-	    <input type="email" id="form1Example1" name="username" class="form-control" />
-	    <label class="form-label" for="form1Example1">Email address</label>
+	  <label class="form-label" for="form1Example1">Email address</label>
+	    <input type="text" id="form1Example1" name="username" class="form-control" />
 	  </div>
 
 	  <!-- Password input -->
 	  <div class="mb-4">
+	  <label class="form-label" for="form1Example2">Password</label>
 	    <input type="password" id="form1Example2" name="password" class="form-control" />
-	    <label class="form-label" for="form1Example2">Password</label>
 	  </div>
 
     <div class="mb-4">

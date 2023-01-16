@@ -20,6 +20,11 @@ public class LoginController {
 	@Autowired
 	UserRepository userRepository;
 	
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+
 	@GetMapping("/loginForm")
 	public String loginForm() {
 		return "/login/loginForm";

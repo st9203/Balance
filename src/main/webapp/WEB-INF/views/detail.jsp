@@ -2,7 +2,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 
-<div class="container">
+<div class="container" style='color:white;'>
 
 
 
@@ -21,8 +21,8 @@
 	<hr>
 	<br><br>
 	<button type="button" onclick="history.back();" class="btn btn-secondary">Back</button>
-	<a href="/board/del?no=${board.no }" class="btn btn-warning">Modify</a>
-	<a href="/board/del?no=${board.no }" class="btn btn-danger">Remove</a>
+	<a href="/balance/board/modify?no=${board.no }" class="btn btn-warning">Modify</a>
+	<a href="/balance/board/del?no=${board.no }" class="btn btn-danger">Remove</a>
 </div>
 
 <%@include file="common/footer.jsp"%>

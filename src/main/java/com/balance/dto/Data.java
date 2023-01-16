@@ -20,7 +20,7 @@ public class Data {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idx;
 	private String theme;
-	private String ifMoon;
+	private String condition;
 	private int choice;
 	private String A;
 	private String B;
